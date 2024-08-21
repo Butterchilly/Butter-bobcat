@@ -1,5 +1,7 @@
 Config = {}
 
+Config.Dispatch = 'ps' -- \\ (ps/Custom) Edit Custom In bride/client.lua
+
 Config.Cops = 6
 
 Config.Door1 = 11

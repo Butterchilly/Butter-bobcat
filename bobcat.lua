@@ -19,10 +19,6 @@ RegisterNetEvent('qb-police:CopCount', function()
     cops = amount
 end)
 
-local function Alert()
-    exports['moz-dispatch']:BobcatRobbery()
-end
-
 local function loadAnimDict(dict)
     while not HasAnimDictLoaded(dict) do
         RequestAnimDict(dict)
@@ -281,7 +277,7 @@ function DoorThermite()
                         if cops >= 0 then
                             local hasitem = QBCore.Functions.HasItem('thermite')
                                 if hasitem then
-                                    Alert()
+                                    AlertPolice()
                                     exports["memorygame"]:thermiteminigame(Config.ThermiteBlocks, Config.ThermiteAttempts, Config.ThermiteShow, Config.ThermiteTime,
                                     function() -- success
                                         ThermiteEffect()
@@ -553,7 +549,7 @@ local function hackanim()
                 NetworkStartSynchronisedScene(HackLoop)
                     exports['hacking']:OpenHackingGame(Config.LaptopTime, Config.LaptopBlocks, Config.LaptopRepeat, function(Success)
                     if Success then -- success
-                        Alert()
+                        AlertPolice()
                         NetworkStopSynchronisedScene(HackLoop)
                         NetworkStartSynchronisedScene(HackLoopFinish)
                         Wait(6000)
