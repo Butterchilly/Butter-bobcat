@@ -1,10 +1,12 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 author 'Butterchilly'
 
 client_scripts {
-    'bobcat.lua',
+    'client/*.lua',
+    'bridge/client.lua'
 }
 
 shared_scripts {
@@ -14,5 +16,3 @@ shared_scripts {
 server_scripts {
     'server.lua',
 }
-
-lua54 'yes'
