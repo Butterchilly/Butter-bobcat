@@ -73,7 +73,6 @@ RegisterNetEvent('Butter-bobcatheist:server:LockerItem', function(type)
     player.Functions.AddItem('WEAPON_UZI', bags, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['WEAPON_DE'], "add")
     player.Functions.AddItem('WEAPON_DE', 3, false)
-    exports['Butter-extras']:Logs('bobcat', 'Bobcat Robbery', 'default', '**Guns Uzi**:\n'..bags..'\n**Person**:\n'..GetPlayerName(src))
 end)
 
 RegisterNetEvent('sync', function(status)
